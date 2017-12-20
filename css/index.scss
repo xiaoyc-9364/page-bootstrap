@@ -1,5 +1,6 @@
 $headerAndfooterBgcolor: #2d2d2d;
 $bannerLetterSpacing: 3px;
+$activeColor: #ff7878;
 @font-face {
     font-family: 'si';
     src: url('../fonts/socicon.eot');
@@ -22,44 +23,48 @@ $bannerLetterSpacing: 3px;
   font-style: normal;
 }
 
-
-
 .fr {
 	float: right;
 }
 .fl {
 	float: left;
 }
-.header {
-	width: 100%;
-	background-color: $headerAndfooterBgcolor;
-	z-index: 999;
-	position: fixed;
-	height: 81px;
-	display: flex;
-	align-items: center;
-	.container {
-		ul li {
-			float: left;
-			list-style: none;
 
+.header {
+	background-color: $headerAndfooterBgcolor;
+	border: none;
+	.container {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		
+		ul li {
 			a {
-				display: block;
-				color: #999;
-				line-height: 50px;
-				padding: 0 20px;
-				float: left;
+				&:hover {
+					background-color: $activeColor;
+					color: #fff;
+				}
 			}
+
 			&:nth-of-type(1) a {
-				background-color: #ff7878;
+				background-color: $activeColor;
 				color: #fff;
 			}
+
+			&:last-of-type a::after {
+				content: '\f003';
+				font-family: 'FontAwesome' !important;
+				display: block;
+				font-size: 14px;
+			}
+			
 		}
-		
+
+		h1 {
+		padding: 0;
+		margin: 0;
+		}
 	}
-	h1 {
-		line-height: 81px;
-	}
+
 }
 
 .banner {
@@ -105,7 +110,7 @@ $bannerLetterSpacing: 3px;
 			height: 30px;
 			font-size: 30px;
 			line-height: 1;
-			color: #ff7878;
+			color: $activeColor;
 			margin-bottom: 27px;
 			position: relative;
 			left: 50%;
@@ -196,7 +201,7 @@ $bannerLetterSpacing: 3px;
 	}
 }
 .about-our {
-	background-color: #ff7878;
+	background-color: $activeColor;
 	color: #fff;
 	padding: 35px 0;
 	p {
@@ -219,25 +224,19 @@ $bannerLetterSpacing: 3px;
 		margin: 0 auto;
 
 	}
-	a::after {
-		display: block;
-		// width: 29px;
-		// height: 29px;
-		font-family: 'si' !important;
-		color: #bdbdbd;
-		// overflow: hidden;
-		text-align: center;
-		font-size: 29px;
-		// &:hover::after {
-		// 	color: #ff7878;
-		// }
+	a {
+		&:hover::after {
+			color: $activeColor;
+		}
+		&::after {
+			display: block;
+			font-family: 'si' !important;
+			color: #bdbdbd;
+			text-align: center;
+			font-size: 29px;
+		}
+	}
 
-	}
-	a:hover::after {
-		color:#ff7878;
-		outline: none;
-		text-decoration: none;
-	}
 	.twitter::after {
 		content: '\e040';
 	}

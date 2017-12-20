@@ -1,50 +1,39 @@
-<!DOCTYPE。 html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>bootstrap</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- <link rel="stylesheet" href="css/reset.css"> -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 	<!-- 头部 -->
-	<header class="header">
-		<div class="container">
-			<h1 class="fl"><img src="image/spotlogo1.png" alt="logo"></h1>
-			<div class="fr">
-				<ul>
-					<li><a href="#">HOME</a></li>
+	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse header">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+				<h1 class="navbar-brand"><img src="image/spotlogo1.png" alt="logo"></h1>
+	         </div>
+
+	          <!-- 右上角的导航 -->
+	        <div class="collapse navbar-collapse navbar-right" id="navbar-collapse-1">
+	            <ul class="nav navbar-nav" >
+	             	<li><a href="#">HOME</a></li>
 					<li><a href="#">WORKS</a></li>
 					<li><a href="#">SERVICES</a></li>
 					<li><a href="#">TEAM</a></li>
 					<li><a href="#">BLOG</a></li>
 					<li><a href="#"></a></li>
-				</ul>
-			</div>
-		</div>
-			
-
-
-
-
-
-<!-- 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-2">
-					<h1 class="logo fl"><img src="image/spotlogo1.png" alt="logo"></h1>
-				</div>
-				<div class="col-md-10 navbar navbar-default">
-					
-					
-				<button class="menu" id="menu"></button>
-				</div>
-			</div>
-		</div> -->
-	</header>
+	            </ul>
+	        </div>
+	    </div>
+	</nav>
 	<!-- 横幅 -->
 	<section class="banner">
 		<div class="container">
@@ -144,7 +133,7 @@
 			
 		</div>
 	</footer>
-	<!-- <script type="text/javascript" src="js/jquery"></script> -->
-	<!-- <script src="js/bootstrap.js"></script> -->
+	<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 </body>
 </html>
